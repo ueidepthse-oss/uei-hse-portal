@@ -1,0 +1,19 @@
+/* Global UEI HSE Portal Styles */
+
+:root {
+    --uei-dark: #111827;
+    --uei-orange: #f59e0b;
+    --uei-light: #f5f7fb;
+    --uei-border: #e5e7eb;
+    --uei-text: #1f2937;
+    --uei-muted: #6b7280;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
