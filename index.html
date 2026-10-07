@@ -8,106 +8,84 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>UEI HSE Portal - Dashboard</title>
+    <title>UEI HSE | Health, Safety & Environment</title>
 
+    <!-- GLOBAL STYLE -->
     <link rel="stylesheet"
           href="css/global.css">
 
+    <!-- HOME STYLE -->
     <link rel="stylesheet"
           href="css/dashboard.css">
 
 </head>
 
 
-<body>
+<body class="home-page">
 
 
-    <!-- =========================================
-         SIDEBAR
-    ========================================== -->
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
 
-    <aside class="sidebar">
+    <header class="home-header">
 
 
-        <div class="logo">
+        <!-- BRAND -->
 
-            <div class="logo-icon">
-                🛡️
-            </div>
+        <a href="index.html"
+           class="home-brand">
 
-            <div>
 
-                <h2>UEI HSE</h2>
+            <div class="home-brand-logo">
 
-                <p>
-                    Safety Management Portal
-                </p>
+                UEI
 
             </div>
 
-        </div>
+
+            <div class="home-brand-text">
+
+                <strong>
+                    UEI HSE
+                </strong>
+
+                <span>
+                    Health, Safety & Environment
+                </span>
+
+            </div>
 
 
-        <div class="menu-title">
-            Main Menu
-        </div>
+        </a>
 
 
-        <nav class="menu">
+
+        <!-- NAVIGATION -->
+
+        <nav class="home-navigation">
 
 
             <a href="index.html"
-               class="active">
+               class="home-nav-link active">
 
-                🏠
-
-                <span>
-                    Dashboard
-                </span>
+                HOME
 
             </a>
 
 
-            <a href="inspection.html">
+            <a href="#important-report"
+               class="home-nav-link">
 
-                🔍
-
-                <span>
-                    Safety Inspection
-                </span>
+                IMPORTANT REPORT
 
             </a>
 
 
-            <a href="incident.html">
+            <a href="#document-category"
+               class="home-nav-link">
 
-                ⚠️
-
-                <span>
-                    Incident
-                </span>
-
-            </a>
-
-
-            <a href="p5m.html">
-
-                👷
-
-                <span>
-                    P5M / Toolbox
-                </span>
-
-            </a>
-
-
-            <a href="training.html">
-
-                🎓
-
-                <span>
-                    Training
-                </span>
+                DOCUMENT CATEGORY
 
             </a>
 
@@ -115,95 +93,259 @@
         </nav>
 
 
-        <div class="menu-title">
-            Management
-        </div>
+
+        <!-- MOBILE MENU -->
+
+        <button class="home-menu-button"
+                type="button"
+                aria-label="Menu">
+
+            ☰
+
+        </button>
 
 
-        <nav class="menu">
-
-
-            <a href="documents.html">
-
-                📄
-
-                <span>
-                    Documents
-                </span>
-
-            </a>
-
-
-            <a href="emergency.html">
-
-                🚨
-
-                <span>
-                    Emergency
-                </span>
-
-            </a>
-
-
-            <a href="reports.html">
-
-                📊
-
-                <span>
-                    Reports
-                </span>
-
-            </a>
-
-
-        </nav>
-
-
-    </aside>
+    </header>
 
 
 
-    <!-- =========================================
-         MAIN
-    ========================================== -->
+    <!-- =====================================================
+         HERO SECTION
+    ====================================================== -->
 
-    <main class="main">
-
-
-        <!-- TOPBAR -->
-
-        <header class="topbar">
+    <main>
 
 
-            <h3>
-                HSE Dashboard
-            </h3>
+        <section class="home-hero">
 
 
-            <div class="topbar-right">
+            <!-- HERO TEXT -->
+
+            <div class="home-hero-content">
 
 
-                <div class="notification">
-                    🔔
+                <div class="home-label">
+
+                    HEALTH • SAFETY • ENVIRONMENT
+
                 </div>
 
 
-                <div class="user">
+                <h1>
+
+                    Membangun Budaya Kerja
+                    <span>
+
+                        Aman, Sehat & Berkelanjutan.
+
+                    </span>
+
+                </h1>
 
 
-                    <div class="avatar">
-                        👤
+                <p>
+
+                    Portal informasi dan manajemen Health,
+                    Safety & Environment PT Unggul Ejawantah
+                    Industri untuk mendukung terciptanya
+                    lingkungan kerja yang aman, sehat,
+                    produktif, dan berkelanjutan.
+
+                </p>
+
+
+                <div class="home-hero-actions">
+
+
+                    <a href="#hse-dashboard"
+                       class="home-button primary">
+
+                        Explore HSE
+
+                    </a>
+
+
+                    <a href="documents.html"
+                       class="home-button secondary">
+
+                        HSE Documents
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- HERO VISUAL -->
+
+            <div class="home-hero-visual">
+
+
+                <div class="home-hero-card">
+
+
+                    <div class="hero-card-top">
+
+                        <span>
+                            UEI HSE
+                        </span>
+
+                        <span>
+                            2026
+                        </span>
+
                     </div>
 
 
-                    <div class="user-info">
+                    <div class="hero-shield">
+
+                        🛡️
+
+                    </div>
+
+
+                    <h3>
+
+                        SAFETY FIRST
+
+                    </h3>
+
+
+                    <p>
+
+                        Zero Accident
+                        • Zero Harm
+                        • Safe Work
+
+                    </p>
+
+
+                    <div class="hero-card-line"></div>
+
+
+                    <div class="hero-card-bottom">
+
+                        <span>
+                            HSE MANAGEMENT SYSTEM
+                        </span>
+
+                        <span>
+                            UEI
+
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             INTRODUCTION
+        ================================================== -->
+
+        <section class="home-introduction">
+
+
+            <div class="section-heading">
+
+
+                <span>
+                    ABOUT HSE
+                </span>
+
+
+                <h2>
+                    Tentang Departemen HSE
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="introduction-grid">
+
+
+                <div class="introduction-text">
+
+
+                    <p>
+
+                        Departemen Health, Safety & Environment
+                        merupakan bagian penting dalam memastikan
+                        seluruh aktivitas operasional PT Unggul
+                        Ejawantah Industri berjalan sesuai dengan
+                        standar keselamatan, kesehatan kerja,
+                        perlindungan lingkungan, serta ketentuan
+                        peraturan yang berlaku.
+
+                    </p>
+
+
+                    <p>
+
+                        Melalui pengendalian risiko, inspeksi,
+                        pelaporan, pelatihan, komunikasi keselamatan,
+                        serta peningkatan berkelanjutan, HSE
+                        berkomitmen membangun budaya kerja yang
+                        mengutamakan keselamatan setiap pekerja.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="introduction-highlight">
+
+
+                    <div>
 
                         <strong>
-                            HSE Admin
+                            ZERO ACCIDENT
                         </strong>
 
                         <span>
-                            HSE Department
+                            Target keselamatan
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            SAFE WORK
+                        </strong>
+
+                        <span>
+                            Budaya kerja aman
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            COMPLIANCE
+                        </strong>
+
+                        <span>
+                            Kepatuhan regulasi
                         </span>
 
                     </div>
@@ -215,265 +357,430 @@
             </div>
 
 
-        </header>
+        </section>
 
 
 
-        <!-- =====================================
-             CONTENT
-        ====================================== -->
+        <!-- =================================================
+             IMPORTANT REPORT
+        ================================================== -->
 
-        <section class="dashboard-content">
+        <section class="home-important"
+                 id="important-report">
 
 
-            <!-- WELCOME -->
+            <div class="section-heading light">
 
-            <div class="dashboard-welcome">
 
-                <h1>
-                    Good Morning, HSE Team 👋
-                </h1>
+                <span>
+                    IMPORTANT REPORT
+                </span>
+
+
+                <h2>
+                    Laporan Penting HSE
+                </h2>
+
 
                 <p>
-                    Berikut adalah ringkasan kinerja
-                    Health, Safety & Environment
-                    PT Unggul Ejawantah Industri.
+
+                    Informasi dan laporan yang membutuhkan
+                    perhatian serta tindak lanjut.
+
                 </p>
+
 
             </div>
 
 
 
-            <!-- =================================
-                 STATISTICS
-            ================================== -->
-
-            <div class="dashboard-stats">
+            <div class="important-grid">
 
 
-                <div class="dashboard-stat-card">
+                <a href="incident.html"
+                   class="important-card">
 
 
-                    <div class="dashboard-stat-header">
+                    <div class="important-icon danger">
+                        ⚠️
+                    </div>
 
-                        <span class="dashboard-stat-title">
-                            TOTAL TEMUAN
+
+                    <div>
+
+                        <span>
+                            INCIDENT
                         </span>
 
-                        <div class="dashboard-stat-icon">
-                            🔎
-                        </div>
+                        <strong>
+                            Incident Report
+                        </strong>
+
+                        <p>
+                            Pelaporan dan tindak lanjut
+                            kejadian keselamatan.
+                        </p>
 
                     </div>
 
 
-                    <div class="dashboard-stat-number">
+                    <div class="important-arrow">
+                        →
+                    </div>
+
+
+                </a>
+
+
+
+                <a href="inspection.html"
+                   class="important-card">
+
+
+                    <div class="important-icon warning">
+                        🔎
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            INSPECTION
+                        </span>
+
+                        <strong>
+                            Safety Findings
+                        </strong>
+
+                        <p>
+                            Temuan hasil inspeksi
+                            dan safety patrol.
+                        </p>
+
+                    </div>
+
+
+                    <div class="important-arrow">
+                        →
+                    </div>
+
+
+                </a>
+
+
+
+                <a href="emergency.html"
+                   class="important-card">
+
+
+                    <div class="important-icon emergency">
+                        🚨
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            EMERGENCY
+                        </span>
+
+                        <strong>
+                            Emergency Response
+                        </strong>
+
+                        <p>
+                            Informasi tanggap darurat
+                            dan kontak penting.
+                        </p>
+
+                    </div>
+
+
+                    <div class="important-arrow">
+                        →
+                    </div>
+
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             HSE DASHBOARD
+        ================================================== -->
+
+        <section class="home-dashboard"
+                 id="hse-dashboard">
+
+
+            <div class="section-heading">
+
+
+                <span>
+                    HSE PERFORMANCE
+                </span>
+
+
+                <h2>
+                    HSE Dashboard
+                </h2>
+
+
+                <p>
+                    Ringkasan informasi kinerja HSE.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- CATEGORY CARDS -->
+
+            <div class="hse-category-grid">
+
+
+                <a href="inspection.html"
+                   class="hse-category-card">
+
+
+                    <div class="category-icon">
+                        🔍
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            SAFETY
+                        </span>
+
+                        <strong>
+                            Inspection
+                        </strong>
+
+                    </div>
+
+
+                    <div class="category-number">
                         125
                     </div>
 
 
-                    <div class="dashboard-stat-desc">
-                        Semua temuan HSE
+                </a>
+
+
+
+                <a href="incident.html"
+                   class="hse-category-card">
+
+
+                    <div class="category-icon">
+                        ⚠️
                     </div>
 
 
-                </div>
+                    <div>
 
-
-
-                <div class="dashboard-stat-card">
-
-
-                    <div class="dashboard-stat-header">
-
-                        <span class="dashboard-stat-title">
-                            TEMUAN CLOSED
+                        <span>
+                            INCIDENT
                         </span>
 
-                        <div class="dashboard-stat-icon">
-                            ✅
-                        </div>
+                        <strong>
+                            Report
+                        </strong>
 
                     </div>
 
 
-                    <div class="dashboard-stat-number">
-                        98
+                    <div class="category-number">
+                        08
                     </div>
 
 
-                    <div class="dashboard-stat-desc">
-                        78.4% dari total temuan
+                </a>
+
+
+
+                <a href="p5m.html"
+                   class="hse-category-card">
+
+
+                    <div class="category-icon">
+                        👷
                     </div>
 
 
-                </div>
+                    <div>
 
-
-
-                <div class="dashboard-stat-card">
-
-
-                    <div class="dashboard-stat-header">
-
-                        <span class="dashboard-stat-title">
-                            TEMUAN OPEN
+                        <span>
+                            SAFETY TALK
                         </span>
 
-                        <div class="dashboard-stat-icon">
-                            ⚠️
-                        </div>
+                        <strong>
+                            P5M / Toolbox
+                        </strong>
 
                     </div>
 
 
-                    <div class="dashboard-stat-number">
-                        27
-                    </div>
-
-
-                    <div class="dashboard-stat-desc">
-                        Membutuhkan tindakan
-                    </div>
-
-
-                </div>
-
-
-
-                <div class="dashboard-stat-card">
-
-
-                    <div class="dashboard-stat-header">
-
-                        <span class="dashboard-stat-title">
-                            P5M
-                        </span>
-
-                        <div class="dashboard-stat-icon">
-                            👷
-                        </div>
-
-                    </div>
-
-
-                    <div class="dashboard-stat-number">
+                    <div class="category-number">
                         45
                     </div>
 
 
-                    <div class="dashboard-stat-desc">
-                        Kegiatan bulan ini
+                </a>
+
+
+
+                <a href="training.html"
+                   class="hse-category-card">
+
+
+                    <div class="category-icon">
+                        🎓
                     </div>
 
 
-                </div>
+                    <div>
+
+                        <span>
+                            COMPETENCY
+                        </span>
+
+                        <strong>
+                            Training
+                        </strong>
+
+                    </div>
+
+
+                    <div class="category-number">
+                        32
+                    </div>
+
+
+                </a>
 
 
             </div>
 
 
 
-            <!-- =================================
-                 CHART + FINDINGS
-            ================================== -->
+            <!-- PERFORMANCE -->
 
-            <div class="dashboard-grid">
+            <div class="performance-layout">
 
 
-                <!-- CHART -->
-
-                <div class="dashboard-panel">
+                <div class="performance-card">
 
 
-                    <div class="dashboard-panel-header">
+                    <div class="performance-header">
 
-                        <h3>
-                            HSE Finding Trend
-                        </h3>
 
-                        <span>
-                            Januari - Juni 2026
+                        <div>
+
+                            <span>
+                                MONTHLY FINDINGS
+                            </span>
+
+                            <h3>
+                                HSE Finding Trend
+                            </h3>
+
+                        </div>
+
+
+                        <span class="performance-period">
+                            2026
                         </span>
+
 
                     </div>
 
 
-                    <div class="dashboard-chart">
+
+                    <div class="performance-chart">
 
 
-                        <div class="dashboard-bar-container">
+                        <div class="chart-column">
 
-                            <div class="dashboard-bar"
-                                 style="height:45%;">
+                            <div class="chart-bar"
+                                 style="height:42%;">
                             </div>
 
-                            <span class="dashboard-month">
+                            <span>
                                 Jan
                             </span>
 
                         </div>
 
 
-                        <div class="dashboard-bar-container">
+                        <div class="chart-column">
 
-                            <div class="dashboard-bar"
-                                 style="height:65%;">
+                            <div class="chart-bar"
+                                 style="height:58%;">
                             </div>
 
-                            <span class="dashboard-month">
+                            <span>
                                 Feb
                             </span>
 
                         </div>
 
 
-                        <div class="dashboard-bar-container">
+                        <div class="chart-column">
 
-                            <div class="dashboard-bar"
-                                 style="height:55%;">
+                            <div class="chart-bar"
+                                 style="height:48%;">
                             </div>
 
-                            <span class="dashboard-month">
+                            <span>
                                 Mar
                             </span>
 
                         </div>
 
 
-                        <div class="dashboard-bar-container">
+                        <div class="chart-column">
 
-                            <div class="dashboard-bar"
-                                 style="height:80%;">
+                            <div class="chart-bar"
+                                 style="height:72%;">
                             </div>
 
-                            <span class="dashboard-month">
+                            <span>
                                 Apr
                             </span>
 
                         </div>
 
 
-                        <div class="dashboard-bar-container">
+                        <div class="chart-column">
 
-                            <div class="dashboard-bar"
-                                 style="height:70%;">
+                            <div class="chart-bar"
+                                 style="height:62%;">
                             </div>
 
-                            <span class="dashboard-month">
+                            <span>
                                 Mei
                             </span>
 
                         </div>
 
 
-                        <div class="dashboard-bar-container">
+                        <div class="chart-column">
 
-                            <div class="dashboard-bar"
-                                 style="height:90%;">
+                            <div class="chart-bar"
+                                 style="height:84%;">
                             </div>
 
-                            <span class="dashboard-month">
+                            <span>
                                 Jun
                             </span>
 
@@ -487,236 +794,77 @@
 
 
 
-                <!-- RECENT FINDINGS -->
+                <!-- STATUS -->
 
-                <div class="dashboard-panel">
+                <div class="performance-status">
 
 
-                    <div class="dashboard-panel-header">
-
-                        <h3>
-                            Recent Findings
-                        </h3>
+                    <div class="performance-status-header">
 
                         <span>
-                            Terbaru
+                            FINDING STATUS
                         </span>
-
-                    </div>
-
-
-                    <div class="dashboard-finding">
-
-
-                        <div class="dashboard-finding-info">
-
-                            <strong>
-                                Housekeeping
-                            </strong>
-
-                            <span>
-                                Area Workshop
-                            </span>
-
-                        </div>
-
-
-                        <span class="dashboard-badge dashboard-badge-open">
-                            OPEN
-                        </span>
-
-
-                    </div>
-
-
-
-                    <div class="dashboard-finding">
-
-
-                        <div class="dashboard-finding-info">
-
-                            <strong>
-                                APD
-                            </strong>
-
-                            <span>
-                                Area Conveyor
-                            </span>
-
-                        </div>
-
-
-                        <span class="dashboard-badge dashboard-badge-closed">
-                            CLOSED
-                        </span>
-
-
-                    </div>
-
-
-
-                    <div class="dashboard-finding">
-
-
-                        <div class="dashboard-finding-info">
-
-                            <strong>
-                                Electrical
-                            </strong>
-
-                            <span>
-                                Ruang Genset
-                            </span>
-
-                        </div>
-
-
-                        <span class="dashboard-badge dashboard-badge-open">
-                            OPEN
-                        </span>
-
-
-                    </div>
-
-
-
-                    <div class="dashboard-finding">
-
-
-                        <div class="dashboard-finding-info">
-
-                            <strong>
-                                Safety Sign
-                            </strong>
-
-                            <span>
-                                Area Jetty
-                            </span>
-
-                        </div>
-
-
-                        <span class="dashboard-badge dashboard-badge-closed">
-                            CLOSED
-                        </span>
-
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- =================================
-                 QUICK ACCESS
-            ================================== -->
-
-            <div class="dashboard-quick">
-
-
-                <div class="dashboard-panel-header">
-
-                    <h3>
-                        Quick Access
-                    </h3>
-
-                </div>
-
-
-                <div class="dashboard-quick-grid">
-
-
-                    <a href="inspection.html"
-                       class="dashboard-quick-card">
-
-
-                        <div class="dashboard-quick-icon">
-                            🔍
-                        </div>
-
 
                         <strong>
-                            Safety Patrol
+                            125
                         </strong>
 
-
-                        <span>
-                            Input hasil inspeksi
-                        </span>
+                    </div>
 
 
-                    </a>
+                    <div class="status-progress">
 
 
-
-                    <a href="incident.html"
-                       class="dashboard-quick-card">
-
-
-                        <div class="dashboard-quick-icon">
-                            ⚠️
+                        <div class="status-progress-bar"
+                             style="width:78%;">
                         </div>
 
 
-                        <strong>
-                            Report Incident
-                        </strong>
+                    </div>
 
 
-                        <span>
-                            Laporkan kejadian
-                        </span>
+                    <div class="status-details">
 
 
-                    </a>
+                        <div>
 
+                            <span class="status-dot closed">
+                            </span>
 
+                            <span>
+                                Closed
+                            </span>
 
-                    <a href="p5m.html"
-                       class="dashboard-quick-card">
+                            <strong>
+                                98
+                            </strong>
 
-
-                        <div class="dashboard-quick-icon">
-                            👷
                         </div>
 
 
-                        <strong>
-                            P5M / Toolbox
-                        </strong>
+                        <div>
 
+                            <span class="status-dot open">
+                            </span>
 
-                        <span>
-                            Input kegiatan P5M
-                        </span>
+                            <span>
+                                Open
+                            </span>
 
+                            <strong>
+                                27
+                            </strong>
 
-                    </a>
-
-
-
-                    <a href="documents.html"
-                       class="dashboard-quick-card">
-
-
-                        <div class="dashboard-quick-icon">
-                            📄
                         </div>
 
 
-                        <strong>
-                            HSE Documents
-                        </strong>
+                    </div>
 
 
-                        <span>
-                            Akses dokumen HSE
-                        </span>
+                    <a href="reports.html"
+                       class="status-link">
 
+                        View HSE Reports →
 
                     </a>
 
@@ -730,7 +878,249 @@
         </section>
 
 
+
+        <!-- =================================================
+             DOCUMENT CATEGORY
+        ================================================== -->
+
+        <section class="home-documents"
+                 id="document-category">
+
+
+            <div class="section-heading">
+
+
+                <span>
+                    DOCUMENT CENTER
+                </span>
+
+
+                <h2>
+                    Document Category
+                </h2>
+
+
+                <p>
+                    Akses dokumen dan referensi HSE.
+                </p>
+
+
+            </div>
+
+
+
+            <div class="document-grid">
+
+
+                <a href="documents.html"
+                   class="document-card">
+
+                    <span>
+                        📘
+                    </span>
+
+                    <strong>
+                        SOP & Procedure
+                    </strong>
+
+                    <small>
+                        Prosedur HSE
+                    </small>
+
+                </a>
+
+
+                <a href="documents.html"
+                   class="document-card">
+
+                    <span>
+                        📋
+                    </span>
+
+                    <strong>
+                        JSA / JHA
+                    </strong>
+
+                    <small>
+                        Analisis keselamatan kerja
+                    </small>
+
+                </a>
+
+
+                <a href="documents.html"
+                   class="document-card">
+
+                    <span>
+                        📝
+                    </span>
+
+                    <strong>
+                        HSE Form
+                    </strong>
+
+                    <small>
+                        Form dan checklist
+                    </small>
+
+                </a>
+
+
+                <a href="emergency.html"
+                   class="document-card">
+
+                    <span>
+                        🚨
+                    </span>
+
+                    <strong>
+                        Emergency
+                    </strong>
+
+                    <small>
+                        Prosedur keadaan darurat
+                    </small>
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             GALLERY
+        ================================================== -->
+
+        <section class="home-gallery">
+
+
+            <div class="section-heading">
+
+
+                <span>
+                    HSE ACTIVITIES
+                </span>
+
+
+                <h2>
+                    HSE Gallery
+                </h2>
+
+
+                <p>
+                    Dokumentasi kegiatan keselamatan
+                    dan lingkungan kerja.
+                </p>
+
+
+            </div>
+
+
+
+            <div class="gallery-grid">
+
+
+                <div class="gallery-item gallery-one">
+
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            SAFETY PATROL
+                        </span>
+
+                        <strong>
+                            Field Inspection
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="gallery-item gallery-two">
+
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            P5M
+                        </span>
+
+                        <strong>
+                            Toolbox Meeting
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="gallery-item gallery-three">
+
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            EMERGENCY
+                        </span>
+
+                        <strong>
+                            Emergency Drill
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
     </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="home-footer">
+
+
+        <div>
+
+            <strong>
+                UEI HSE
+            </strong>
+
+            <span>
+                Health, Safety & Environment
+            </span>
+
+        </div>
+
+
+        <div>
+
+            © 2026 PT Unggul Ejawantah Industri
+
+        </div>
+
+
+    </footer>
 
 
 
