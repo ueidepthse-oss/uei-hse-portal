@@ -1,10 +1,10 @@
 /* =========================================
    UEI HSE PORTAL
-   DASHBOARD JAVASCRIPT
+   HOME JAVASCRIPT
 ========================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    console.log("UEI HSE Dashboard loaded");
+    console.log("UEI HSE Home loaded");
 
 });
