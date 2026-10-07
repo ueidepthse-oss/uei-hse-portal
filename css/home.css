@@ -1,775 +1,1879 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>HSE Department | Health Safety Environment</title>
-
-    <meta
-        name="description"
-        content="HSE Department - Health, Safety & Environment"
-    >
-
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
-
-    <!-- Home CSS -->
-    <link rel="stylesheet" href="css/home.css">
-</head>
-
-<body>
-
-    <!-- =====================================================
-         HEADER
-    ====================================================== -->
-    <header class="site-header">
-
-        <div class="container header-inner">
-
-            <!-- Logo -->
-            <a href="index.html" class="brand">
-
-                <div class="brand-logo">
-                    <div class="brand-logo-inner">
-                        +
-                    </div>
-                </div>
-
-                <div class="brand-text">
-                    <strong>HSE DEPARTMENT</strong>
-                    <span>Health | Safety | Environment</span>
-                </div>
-
-            </a>
-
-
-            <!-- Desktop Navigation -->
-            <nav class="main-nav">
-
-                <a href="index.html" class="nav-link active">
-                    Home
-                </a>
-
-                <a href="#" class="nav-link dropdown">
-                    Profil
-                    <span>⌄</span>
-                </a>
-
-                <a href="#" class="nav-link dropdown">
-                    Regulasi
-                    <span>⌄</span>
-                </a>
-
-                <a href="#" class="nav-link dropdown">
-                    Prosedur & Dokumen
-                    <span>⌄</span>
-                </a>
+/* =========================================================
+   HSE DEPARTMENT - HOME PAGE
+   ========================================================= */
 
-                <a href="#" class="nav-link dropdown">
-                    Program
-                    <span>⌄</span>
-                </a>
-
-                <a href="#" class="nav-link dropdown">
-                    Berita & Informasi
-                    <span>⌄</span>
-                </a>
-
-                <a href="#" class="nav-link dropdown">
-                    Galeri
-                    <span>⌄</span>
-                </a>
-
-                <a href="#" class="nav-link">
-                    Kontak
-                </a>
-
-            </nav>
-
-
-            <!-- Header Actions -->
-            <div class="header-actions">
-
-                <button
-                    class="icon-button"
-                    id="searchButton"
-                    aria-label="Cari"
-                >
-                    <svg viewBox="0 0 24 24">
-                        <circle cx="11" cy="11" r="7"></circle>
-                        <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
-                    </svg>
-                </button>
 
-                <button
-                    class="icon-button"
-                    aria-label="Akun"
-                >
-                    <svg viewBox="0 0 24 24">
-                        <circle cx="12" cy="8" r="4"></circle>
-                        <path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"></path>
-                    </svg>
-                </button>
+/* =========================================================
+   ROOT
+   ========================================================= */
 
-                <button
-                    class="mobile-menu-button"
-                    id="mobileMenuButton"
-                    aria-label="Menu"
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+:root {
+    --primary: #08745f;
+    --primary-dark: #04594b;
+    --primary-light: #1ca878;
 
-            </div>
+    --green: #159b68;
+    --green-light: #eaf8f1;
 
-        </div>
+    --dark: #123d37;
+    --text: #243936;
+    --muted: #687875;
 
-    </header>
+    --white: #ffffff;
+    --light: #f5f8f7;
+    --border: #dce7e4;
 
+    --yellow: #f4b91b;
+    --blue: #2779c8;
+    --purple: #7c5bbd;
 
-    <!-- =====================================================
-         SEARCH OVERLAY
-    ====================================================== -->
-    <div class="search-overlay" id="searchOverlay">
+    --shadow:
+        0 5px 20px rgba(14, 63, 54, 0.08);
 
-        <div class="search-box">
+    --radius: 8px;
 
-            <button
-                class="search-close"
-                id="searchClose"
-                aria-label="Tutup"
-            >
-                ×
-            </button>
+    --container: 1440px;
+}
 
-            <h3>Cari Informasi HSE</h3>
 
-            <div class="search-input-wrapper">
+/* =========================================================
+   RESET
+   ========================================================= */
 
-                <input
-                    type="text"
-                    id="searchInput"
-                    placeholder="Cari berita, dokumen, regulasi..."
-                >
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-                <button id="searchSubmit">
-                    Cari
-                </button>
+html {
+    scroll-behavior: smooth;
+}
 
-            </div>
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.6;
+}
 
-        </div>
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
-    </div>
+button,
+input {
+    font-family: inherit;
+}
 
+button {
+    cursor: pointer;
+}
 
-    <!-- =====================================================
-         MOBILE NAVIGATION
-    ====================================================== -->
-    <div class="mobile-nav" id="mobileNav">
+img {
+    max-width: 100%;
+    display: block;
+}
 
-        <a href="index.html">Home</a>
-        <a href="#">Profil</a>
-        <a href="#">Regulasi</a>
-        <a href="#">Prosedur & Dokumen</a>
-        <a href="#">Program</a>
-        <a href="#">Berita & Informasi</a>
-        <a href="#">Galeri</a>
-        <a href="#">Kontak</a>
 
-    </div>
+/* =========================================================
+   CONTAINER
+   ========================================================= */
 
+.container {
+    width: min(
+        calc(100% - 48px),
+        var(--container)
+    );
 
-    <!-- =====================================================
-         HERO
-    ====================================================== -->
-    <main>
+    margin: 0 auto;
+}
 
-        <section class="hero">
 
-            <div class="hero-background"></div>
+/* =========================================================
+   HEADER
+   ========================================================= */
 
-            <div class="container hero-content">
+.site-header {
+    height: 76px;
+    background: #ffffff;
+    border-bottom: 1px solid #e6edeb;
 
-                <div class="hero-copy">
+    position: relative;
+    z-index: 100;
+}
 
-                    <div class="hero-label">
-                        HSE DEPARTMENT
-                    </div>
+.header-inner {
+    height: 100%;
 
-                    <h1>
-                        Kerja Aman, Sehat,<br>
-                        Produktif, Lingkungan Lestari
-                    </h1>
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
 
-                    <p>
-                        Kami berkomitmen untuk menciptakan lingkungan kerja
-                        yang aman, sehat dan ramah lingkungan demi
-                        keberlanjutan operasional dan masa depan yang lebih baik.
-                    </p>
 
-                    <a href="#" class="primary-button">
-                        Lihat Program HSE
-                        <span>→</span>
-                    </a>
+/* =========================================================
+   BRAND
+   ========================================================= */
 
-                </div>
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 
+    flex-shrink: 0;
+}
 
-                <!-- Hero Highlights -->
-                <div class="hero-highlights">
+.brand-logo {
+    width: 52px;
+    height: 52px;
 
-                    <div class="hero-highlight">
+    border-radius: 50%;
 
-                        <div class="highlight-icon shield">
-                            ✓
-                        </div>
+    background:
+        radial-gradient(
+            circle at center,
+            #ffffff 0 25%,
+            transparent 26%
+        ),
+        #08745f;
 
-                        <div>
-                            <h3>Zero Accident</h3>
-                            <p>Tidak ada kecelakaan kerja</p>
-                        </div>
+    position: relative;
 
-                    </div>
+    display: grid;
+    place-items: center;
 
+    box-shadow:
+        inset 0 0 0 7px #08745f;
+}
 
-                    <div class="hero-highlight">
+.brand-logo::before,
+.brand-logo::after {
+    content: "";
+    position: absolute;
 
-                        <div class="highlight-icon health">
-                            ♥
-                        </div>
+    background: #08745f;
+}
 
-                        <div>
-                            <h3>Healthy People</h3>
-                            <p>Pekerja sehat, produktivitas meningkat</p>
-                        </div>
+.brand-logo::before {
+    width: 66px;
+    height: 17px;
 
-                    </div>
+    border-radius: 10px;
 
+    z-index: -1;
+}
 
-                    <div class="hero-highlight">
+.brand-logo::after {
+    width: 17px;
+    height: 66px;
 
-                        <div class="highlight-icon environment">
-                            ◒
-                        </div>
+    border-radius: 10px;
 
-                        <div>
-                            <h3>Green Environment</h3>
-                            <p>Lingkungan terjaga, masa depan berkelanjutan</p>
-                        </div>
+    z-index: -1;
+}
 
-                    </div>
+.brand-logo-inner {
+    color: #08745f;
+    background: white;
 
-                </div>
+    width: 21px;
+    height: 21px;
 
-            </div>
+    border-radius: 50%;
 
-        </section>
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1;
+}
 
-        <!-- =================================================
-             MAIN HSE SERVICES
-        ================================================== -->
-        <section class="service-section">
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
 
-            <div class="container">
+.brand-text strong {
+    color: #123d37;
 
-                <div class="service-grid">
+    font-size: 16px;
+    font-weight: 800;
 
-                    <!-- Kesehatan -->
-                    <a href="#" class="service-card">
+    letter-spacing: -0.3px;
+}
 
-                        <div class="service-icon health-icon">
-                            +
-                        </div>
+.brand-text span {
+    color: #84918e;
 
-                        <h3>Kesehatan Kerja</h3>
+    font-size: 10px;
+    line-height: 1.2;
+}
 
-                        <p>
-                            Promosi kesehatan, medical check up,
-                            dan layanan kesehatan kerja.
-                        </p>
 
-                        <span class="service-arrow">→</span>
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
 
-                    </a>
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 4px;
 
+    margin-left: auto;
+}
 
-                    <!-- Keselamatan -->
-                    <a href="#" class="service-card">
+.nav-link {
+    position: relative;
 
-                        <div class="service-icon safety-icon">
-                            ●
-                        </div>
+    padding: 29px 11px;
 
-                        <h3>Keselamatan Kerja</h3>
+    font-size: 13px;
+    font-weight: 600;
 
-                        <p>
-                            Identifikasi bahaya, pengendalian
-                            risiko dan budaya K3.
-                        </p>
+    color: #183f39;
 
-                        <span class="service-arrow">→</span>
+    white-space: nowrap;
 
-                    </a>
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
+}
 
+.nav-link:hover {
+    color: var(--primary);
+}
 
-                    <!-- Lingkungan -->
-                    <a href="#" class="service-card">
+.nav-link.active {
+    color: var(--primary);
+}
 
-                        <div class="service-icon environment-icon">
-                            ◒
-                        </div>
+.nav-link.active::after {
+    content: "";
 
-                        <h3>Lingkungan Hidup</h3>
+    position: absolute;
 
-                        <p>
-                            Pengelolaan lingkungan, limbah
-                            dan konservasi.
-                        </p>
+    left: 10px;
+    right: 10px;
+    bottom: 0;
 
-                        <span class="service-arrow">→</span>
+    height: 3px;
 
-                    </a>
+    background: var(--primary);
 
+    border-radius:
+        3px 3px 0 0;
+}
 
-                    <!-- Regulasi -->
-                    <a href="#" class="service-card">
+.nav-link.dropdown span {
+    font-size: 12px;
+    margin-left: 3px;
+}
 
-                        <div class="service-icon regulation-icon">
-                            ▤
-                        </div>
 
-                        <h3>Regulasi & Standar</h3>
+/* =========================================================
+   HEADER ACTIONS
+   ========================================================= */
 
-                        <p>
-                            Peraturan, standar dan referensi
-                            HSE.
-                        </p>
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
-                        <span class="service-arrow">→</span>
+.icon-button,
+.mobile-menu-button {
+    border: 0;
+    background: transparent;
 
-                    </a>
+    width: 38px;
+    height: 38px;
 
+    display: grid;
+    place-items: center;
+}
 
-                    <!-- Kompetensi -->
-                    <a href="#" class="service-card">
+.icon-button svg {
+    width: 21px;
+    height: 21px;
 
-                        <div class="service-icon training-icon">
-                            ●●
-                        </div>
+    stroke: #123d37;
+    stroke-width: 2;
 
-                        <h3>Pelatihan & Kompetensi</h3>
+    fill: none;
+}
 
-                        <p>
-                            Peningkatan kompetensi SDM
-                            di bidang HSE.
-                        </p>
+.mobile-menu-button {
+    display: none;
 
-                        <span class="service-arrow">→</span>
+    flex-direction: column;
+    gap: 4px;
+}
 
-                    </a>
+.mobile-menu-button span {
+    display: block;
 
-                </div>
+    width: 22px;
+    height: 2px;
 
-            </div>
+    background: var(--dark);
+}
 
-        </section>
 
+/* =========================================================
+   SEARCH OVERLAY
+   ========================================================= */
 
-        <!-- =================================================
-             NEWS + SIDEBAR
-        ================================================== -->
-        <section class="content-section">
+.search-overlay {
+    position: fixed;
 
-            <div class="container content-grid">
+    inset: 0;
 
-                <!-- NEWS -->
-                <div class="news-area">
+    background:
+        rgba(4, 39, 34, 0.7);
 
-                    <div class="section-heading">
+    z-index: 500;
 
-                        <div>
-                            <span class="section-label">
-                                INFORMASI TERKINI
-                            </span>
+    display: none;
 
-                            <h2>Berita & Pengumuman</h2>
-                        </div>
+    align-items: flex-start;
+    justify-content: center;
 
-                        <a href="#" class="view-all">
-                            Lihat Semua →
-                        </a>
+    padding-top: 130px;
+}
 
-                    </div>
+.search-overlay.show {
+    display: flex;
+}
 
+.search-box {
+    width: min(
+        calc(100% - 40px),
+        700px
+    );
 
-                    <!-- News Item 1 -->
-                    <article class="news-item">
+    background: white;
 
-                        <div class="news-image image-one">
-                            <span>HSE</span>
-                        </div>
+    border-radius: 12px;
 
-                        <div class="news-date">
-                            <strong>06</strong>
-                            <span>Okt<br>2025</span>
-                        </div>
+    padding: 35px;
 
-                        <div class="news-content">
+    position: relative;
 
-                            <h3>
-                                Sosialisasi Safety Talk:
-                                Stop Unsafe Action
-                            </h3>
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.25);
+}
 
-                            <p>
-                                HSE Departemen mengadakan kegiatan
-                                safety talk dengan tema "Stop Unsafe
-                                Action" sebagai upaya meningkatkan
-                                kesadaran pekerja terhadap bahaya
-                                di lingkungan kerja.
-                            </p>
+.search-box h3 {
+    margin-bottom: 20px;
 
-                            <a href="#">
-                                Baca Selengkapnya →
-                            </a>
+    color: var(--dark);
 
-                        </div>
+    font-size: 22px;
+}
 
-                    </article>
+.search-close {
+    position: absolute;
 
+    top: 12px;
+    right: 15px;
 
-                    <!-- News Item 2 -->
-                    <article class="news-item">
+    width: 35px;
+    height: 35px;
 
-                        <div class="news-image image-two">
-                            <span>ENV</span>
-                        </div>
+    border: 0;
+    background: transparent;
 
-                        <div class="news-date">
-                            <strong>03</strong>
-                            <span>Okt<br>2025</span>
-                        </div>
+    font-size: 30px;
 
-                        <div class="news-content">
+    color: #61706d;
+}
 
-                            <h3>
-                                Peringatan Hari Lingkungan Hidup Sedunia
-                            </h3>
+.search-input-wrapper {
+    display: flex;
 
-                            <p>
-                                Bersama kita jaga lingkungan, mulai
-                                dari hal kecil di sekitar kita.
-                                Lingkungan yang sehat adalah tanggung
-                                jawab kita bersama.
-                            </p>
+    border: 1px solid var(--border);
 
-                            <a href="#">
-                                Baca Selengkapnya →
-                            </a>
+    border-radius: 7px;
 
-                        </div>
+    overflow: hidden;
+}
 
-                    </article>
+.search-input-wrapper input {
+    flex: 1;
 
+    border: 0;
+    outline: 0;
 
-                    <!-- News Item 3 -->
-                    <article class="news-item">
+    padding: 14px 16px;
 
-                        <div class="news-image image-three">
-                            <span>K3</span>
-                        </div>
+    font-size: 15px;
+}
 
-                        <div class="news-date">
-                            <strong>30</strong>
-                            <span>Sep<br>2025</span>
-                        </div>
+.search-input-wrapper button {
+    border: 0;
 
-                        <div class="news-content">
+    padding: 0 25px;
 
-                            <h3>
-                                Pemberitahuan: Pemeriksaan Kesehatan Berkala
-                            </h3>
+    background: var(--primary);
 
-                            <p>
-                                Seluruh karyawan wajib mengikuti
-                                pemeriksaan kesehatan berkala yang
-                                akan dilaksanakan sesuai jadwal.
-                            </p>
+    color: white;
 
-                            <a href="#">
-                                Baca Selengkapnya →
-                            </a>
+    font-weight: 700;
+}
 
-                        </div>
 
-                    </article>
+/* =========================================================
+   MOBILE NAV
+   ========================================================= */
 
-                </div>
+.mobile-nav {
+    display: none;
 
+    position: fixed;
 
-                <!-- SIDEBAR -->
-                <aside class="sidebar">
+    top: 76px;
+    left: 0;
+    right: 0;
 
-                    <!-- Quick Link -->
-                    <div class="quick-links">
+    background: white;
 
-                        <div class="sidebar-title">
-                            Quick Link
-                        </div>
+    z-index: 90;
 
-                        <a href="#">
-                            <span class="quick-icon">▣</span>
-                            <span>Laporan Incident & Near Miss</span>
-                            <strong>›</strong>
-                        </a>
+    padding: 10px 20px 20px;
 
-                        <a href="#">
-                            <span class="quick-icon">▤</span>
-                            <span>SIP / Izin Kerja</span>
-                            <strong>›</strong>
-                        </a>
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.1);
+}
 
-                        <a href="#">
-                            <span class="quick-icon">●</span>
-                            <span>APD & Peralatan Kerja</span>
-                            <strong>›</strong>
-                        </a>
+.mobile-nav.show {
+    display: block;
+}
 
-                        <a href="#">
-                            <span class="quick-icon">▰</span>
-                            <span>Dokumen HSE</span>
-                            <strong>›</strong>
-                        </a>
+.mobile-nav a {
+    display: block;
 
-                        <a href="#">
-                            <span class="quick-icon">☑</span>
-                            <span>Checklist & Formulir</span>
-                            <strong>›</strong>
-                        </a>
+    padding: 13px 10px;
 
-                        <a href="#">
-                            <span class="quick-icon">☎</span>
-                            <span>Kontak HSE</span>
-                            <strong>›</strong>
-                        </a>
+    border-bottom: 1px solid #edf1ef;
 
-                    </div>
+    color: var(--dark);
 
+    font-size: 14px;
+    font-weight: 600;
+}
 
-                    <!-- Quote -->
-                    <div class="quote-card">
 
-                        <div class="quote-symbol">
-                            “
-                        </div>
+/* =========================================================
+   HERO
+   ========================================================= */
 
-                        <p>
-                            Lingkungan yang baik adalah
-                            warisan terbaik untuk generasi
-                            mendatang.
-                        </p>
+.hero {
+    min-height: 304px;
 
-                        <div class="quote-line"></div>
+    position: relative;
 
-                        <span>
-                            HSE DEPARTMENT
-                        </span>
+    overflow: hidden;
 
-                        <div class="mountain-decoration">
-                            ▲ ▲ ▲
-                        </div>
+    background:
+        linear-gradient(
+            90deg,
+            #063a34 0%,
+            #07584c 30%,
+            rgba(5, 69, 59, 0.65) 55%,
+            rgba(2, 58, 49, 0.88) 100%
+        );
+}
 
-                    </div>
+.hero-background {
+    position: absolute;
 
-                </aside>
+    inset: 0;
 
-            </div>
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 50, 44, 0.85),
+            rgba(5, 76, 62, 0.45),
+            rgba(0, 54, 46, 0.75)
+        ),
+        linear-gradient(
+            180deg,
+            #438f85 0%,
+            #275f58 42%,
+            #544a39 43%,
+            #765f43 100%
+        );
 
-        </section>
+    opacity: 0.95;
+}
 
+.hero-background::after {
+    content: "";
 
-        <!-- =================================================
-             HSE BANNER + STATISTICS
-        ================================================== -->
-        <section class="statistics-section">
+    position: absolute;
 
-            <div class="container statistics-grid">
+    inset: 0;
 
-                <!-- Banner -->
-                <div class="safety-banner">
+    background:
+        radial-gradient(
+            ellipse at 80% 25%,
+            rgba(255,255,255,0.2),
+            transparent 30%
+        );
+}
 
-                    <div class="safety-banner-content">
+.hero-content {
+    min-height: 304px;
 
-                        <span>
-                            HSE DEPARTMENT
-                        </span>
+    position: relative;
+    z-index: 2;
 
-                        <h2>
-                            Keselamatan<br>
-                            adalah investasi,<br>
-                            bukan biaya.
-                        </h2>
+    display: grid;
 
-                        <a href="#">
-                            Mari Budayakan K3
-                            <span>→</span>
-                        </a>
+    grid-template-columns:
+        minmax(0, 1fr)
+        360px;
 
-                    </div>
+    align-items: center;
 
-                </div>
+    gap: 50px;
+}
 
+.hero-copy {
+    padding: 35px 0;
+}
 
-                <!-- Statistics -->
-                <div class="statistics-area">
+.hero-label {
+    color: #3bd37f;
 
-                    <div class="statistics-heading">
+    font-size: 16px;
+    font-weight: 700;
 
-                        <h2>
-                            <span class="statistics-symbol">▥</span>
-                            Statistik HSE
-                        </h2>
+    margin-bottom: 5px;
+}
 
-                        <span>
-                            Update: 06 Oktober 2025
-                        </span>
+.hero h1 {
+    color: white;
 
-                    </div>
+    font-size: clamp(
+        31px,
+        3vw,
+        44px
+    );
 
+    line-height: 1.12;
 
-                    <div class="statistics-cards">
+    letter-spacing: -1.2px;
 
-                        <div class="stat-card">
+    margin-bottom: 13px;
+}
 
-                            <span class="stat-icon">
-                                ●
-                            </span>
+.hero-copy p {
+    max-width: 650px;
 
-                            <strong>0</strong>
+    color: rgba(255,255,255,0.9);
 
-                            <small>LTI</small>
+    font-size: 15px;
 
-                        </div>
+    line-height: 1.55;
 
+    margin-bottom: 20px;
+}
 
-                        <div class="stat-card">
+.primary-button {
+    display: inline-flex;
 
-                            <span class="stat-icon">
-                                ▲
-                            </span>
+    align-items: center;
+    gap: 10px;
 
-                            <strong>0</strong>
+    padding: 10px 18px;
 
-                            <small>TRIR</small>
+    background: #20b967;
 
-                        </div>
+    color: white;
 
+    border-radius: 20px;
 
-                        <div class="stat-card">
+    font-size: 13px;
+    font-weight: 700;
 
-                            <span class="stat-icon">
-                                ◷
-                            </span>
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
 
-                            <strong>365</strong>
+.primary-button:hover {
+    transform: translateY(-2px);
 
-                            <small>Safe Days</small>
+    background: #16a55b;
+}
 
-                        </div>
+.primary-button span {
+    font-size: 17px;
+}
 
 
-                        <div class="stat-card">
+/* =========================================================
+   HERO HIGHLIGHTS
+   ========================================================= */
 
-                            <span class="stat-icon">
-                                ✓
-                            </span>
+.hero-highlights {
+    display: flex;
 
-                            <strong>100%</strong>
+    flex-direction: column;
 
-                            <small>Compliance</small>
+    gap: 12px;
+}
 
-                        </div>
+.hero-highlight {
+    display: flex;
 
-                    </div>
+    align-items: center;
 
-                </div>
+    gap: 15px;
 
-            </div>
+    padding: 4px 0;
+}
 
-        </section>
+.highlight-icon {
+    flex-shrink: 0;
 
-    </main>
+    width: 48px;
+    height: 48px;
 
+    border-radius: 50%;
 
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-    <footer class="site-footer">
+    background:
+        rgba(21, 177, 124, 0.9);
 
-        <div class="container footer-inner">
+    display: grid;
+    place-items: center;
 
-            <div class="footer-brand">
+    color: white;
 
-                <div class="footer-logo">
-                    +
-                </div>
+    font-size: 25px;
+    font-weight: 800;
+}
 
-                <div>
-                    <strong>HSE DEPARTMENT</strong>
-                    <span>Health | Safety | Environment</span>
-                </div>
+.highlight-icon.health {
+    background:
+        rgba(19, 177, 139, 0.9);
+}
 
-            </div>
+.highlight-icon.environment {
+    background:
+        rgba(26, 175, 123, 0.9);
+}
 
+.hero-highlight h3 {
+    color: white;
 
-            <div class="footer-menu">
+    font-size: 15px;
 
-                <a href="index.html">Home</a>
-                <span>|</span>
+    margin-bottom: 1px;
+}
 
-                <a href="#">Profil</a>
-                <span>|</span>
+.hero-highlight p {
+    color: rgba(255,255,255,0.82);
 
-                <a href="#">Regulasi</a>
-                <span>|</span>
+    font-size: 12px;
 
-                <a href="#">Prosedur & Dokumen</a>
-                <span>|</span>
+    line-height: 1.4;
+}
 
-                <a href="#">Program</a>
-                <span>|</span>
 
-                <a href="#">Berita & Informasi</a>
-                <span>|</span>
+/* =========================================================
+   SERVICES
+   ========================================================= */
 
-                <a href="#">Galeri</a>
-                <span>|</span>
+.service-section {
+    padding: 22px 0 18px;
 
-                <a href="#">Kontak</a>
+    background: #ffffff;
+}
 
-            </div>
+.service-grid {
+    display: grid;
 
+    grid-template-columns:
+        repeat(5, 1fr);
 
-            <div class="copyright">
-                © 2025 HSE Department. All rights reserved.
-            </div>
+    gap: 12px;
+}
 
-        </div>
+.service-card {
+    min-height: 184px;
 
-    </footer>
+    border:
+        1px solid #e2e9e7;
 
+    border-radius: 7px;
 
-    <!-- Home JavaScript -->
-    <script src="js/home.js"></script>
+    background: white;
 
-</body>
-</html>
+    box-shadow:
+        0 2px 10px rgba(13, 57, 49, 0.05);
+
+    padding: 17px 18px;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(8, 116, 95, 0.3);
+
+    box-shadow:
+        0 10px 25px rgba(13, 57, 49, 0.1);
+}
+
+.service-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 8px;
+
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.health-icon {
+    background: #e9f7ec;
+    color: #1da052;
+}
+
+.safety-icon {
+    background: #fff5d7;
+    color: #eeb21d;
+}
+
+.environment-icon {
+    background: #eaf8ef;
+    color: #249b62;
+}
+
+.regulation-icon {
+    background: #e9f2ff;
+    color: #2779c8;
+}
+
+.training-icon {
+    background: #f1eaff;
+    color: #7755bb;
+}
+
+.service-card h3 {
+    color: #163d37;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.service-card p {
+    color: #667673;
+
+    font-size: 11.5px;
+
+    line-height: 1.45;
+
+    max-width: 190px;
+}
+
+.service-arrow {
+    color: var(--primary);
+
+    font-size: 18px;
+
+    margin-top: auto;
+}
+
+
+/* =========================================================
+   CONTENT SECTION
+   ========================================================= */
+
+.content-section {
+    padding: 6px 0 25px;
+}
+
+.content-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        300px;
+
+    gap: 22px;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.section-heading {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+.section-label {
+    display: block;
+
+    color: var(--primary);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    margin-bottom: 1px;
+}
+
+.section-heading h2 {
+    color: #163d37;
+
+    font-size: 20px;
+
+    line-height: 1.2;
+}
+
+.view-all {
+    color: var(--primary);
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.view-all:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   NEWS
+   ========================================================= */
+
+.news-area {
+    min-width: 0;
+}
+
+.news-item {
+    display: grid;
+
+    grid-template-columns:
+        130px
+        70px
+        minmax(0, 1fr);
+
+    gap: 12px;
+
+    align-items: center;
+
+    padding: 10px 0;
+
+    border-bottom:
+        1px solid #e4eae8;
+}
+
+.news-item:first-of-type {
+    border-top:
+        1px solid #e4eae8;
+}
+
+.news-image {
+    height: 84px;
+
+    border-radius: 5px;
+
+    display: flex;
+    align-items: flex-end;
+
+    justify-content: flex-start;
+
+    padding: 8px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.news-image::before {
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 60% 20%,
+            rgba(255,255,255,0.25),
+            transparent 20%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(35, 116, 92, 0.8),
+            rgba(7, 53, 46, 0.9)
+        );
+}
+
+.news-image::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 10px;
+    left: 10px;
+
+    width: 55px;
+    height: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #d3e4df 0 40%,
+            #879c96 41% 100%
+        );
+
+    clip-path:
+        polygon(
+            0 100%,
+            20% 25%,
+            42% 45%,
+            61% 10%,
+            100% 100%
+        );
+
+    opacity: 0.7;
+}
+
+.image-two::before {
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(183, 225, 128, 0.8),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #81b94c,
+            #1d6545
+        );
+}
+
+.image-two::after {
+    background:
+        linear-gradient(
+            145deg,
+            #e5f0d2,
+            #81b44b
+        );
+
+    width: 25px;
+    height: 45px;
+
+    left: 55px;
+}
+
+.image-three::before {
+    background:
+        radial-gradient(
+            circle at 30% 30%,
+            rgba(255,255,255,0.35),
+            transparent 20%
+        ),
+        linear-gradient(
+            145deg,
+            #73989b,
+            #274f54
+        );
+}
+
+.news-image span {
+    position: relative;
+    z-index: 2;
+
+    background:
+        rgba(0,0,0,0.35);
+
+    color: white;
+
+    padding: 3px 7px;
+
+    border-radius: 3px;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.news-date {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    background: #e9f7f2;
+
+    border-radius: 4px;
+
+    padding: 5px;
+
+    color: var(--primary);
+
+    text-align: center;
+}
+
+.news-date strong {
+    font-size: 17px;
+
+    line-height: 1;
+}
+
+.news-date span {
+    font-size: 8px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+.news-content {
+    min-width: 0;
+}
+
+.news-content h3 {
+    color: #1c413b;
+
+    font-size: 13px;
+
+    line-height: 1.35;
+
+    margin-bottom: 3px;
+}
+
+.news-content p {
+    color: #6a7774;
+
+    font-size: 10.5px;
+
+    line-height: 1.45;
+
+    margin-bottom: 3px;
+}
+
+.news-content a {
+    color: var(--primary);
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+.quick-links {
+    border:
+        1px solid #dfe8e5;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 2px 12px rgba(0,0,0,0.04);
+}
+
+.sidebar-title {
+    background: var(--primary);
+
+    color: white;
+
+    padding: 12px 17px;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.quick-links a {
+    display: grid;
+
+    grid-template-columns:
+        23px
+        minmax(0, 1fr)
+        10px;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 11px 15px;
+
+    border-bottom:
+        1px solid #e5ecea;
+
+    color: #284a45;
+
+    font-size: 11px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.quick-links a:last-child {
+    border-bottom: 0;
+}
+
+.quick-links a:hover {
+    background: #eff9f5;
+
+    color: var(--primary);
+}
+
+.quick-links a strong {
+    font-size: 18px;
+
+    font-weight: 400;
+
+    color: #8a9794;
+}
+
+.quick-icon {
+    color: var(--primary);
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   QUOTE CARD
+   ========================================================= */
+
+.quote-card {
+    min-height: 180px;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    padding: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #eef9f1,
+            #dcefdc
+        );
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.quote-symbol {
+    color: #399d63;
+
+    font-size: 34px;
+
+    line-height: 0.8;
+
+    font-weight: 800;
+
+    margin-bottom: 7px;
+}
+
+.quote-card p {
+    color: #26734d;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    line-height: 1.45;
+
+    max-width: 235px;
+}
+
+.quote-line {
+    width: 35px;
+    height: 2px;
+
+    background: #409965;
+
+    margin: 10px 0 5px;
+}
+
+.quote-card > span {
+    color: #36714f;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+.mountain-decoration {
+    position: absolute;
+
+    bottom: -5px;
+    left: 0;
+    right: 0;
+
+    color: #79aa73;
+
+    font-size: 45px;
+
+    letter-spacing: -12px;
+
+    opacity: 0.45;
+}
+
+
+/* =========================================================
+   STATISTICS
+   ========================================================= */
+
+.statistics-section {
+    padding: 0 0 25px;
+}
+
+.statistics-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 22px;
+}
+
+.safety-banner {
+    min-height: 176px;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            100deg,
+            rgba(3, 68, 57, 0.96),
+            rgba(5, 78, 65, 0.65)
+        ),
+        linear-gradient(
+            145deg,
+            #698c82,
+            #7b684f
+        );
+}
+
+.safety-banner::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    width: 52%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            145deg,
+            transparent 0 30%,
+            rgba(171, 142, 101, 0.6) 31% 34%,
+            rgba(103, 84, 60, 0.8) 35% 60%,
+            rgba(71, 72, 62, 0.8) 61% 100%
+        );
+
+    clip-path:
+        polygon(
+            10% 100%,
+            35% 50%,
+            50% 58%,
+            63% 25%,
+            100% 0,
+            100% 100%
+        );
+}
+
+.safety-banner-content {
+    position: relative;
+
+    z-index: 2;
+
+    padding: 20px 22px;
+}
+
+.safety-banner-content > span {
+    color: #36c27b;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.safety-banner h2 {
+    color: white;
+
+    font-size: 24px;
+
+    line-height: 1.05;
+
+    margin: 3px 0 12px;
+}
+
+.safety-banner a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 7px 13px;
+
+    background: #1fb567;
+
+    color: white;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   STATISTICS AREA
+   ========================================================= */
+
+.statistics-area {
+    min-width: 0;
+}
+
+.statistics-heading {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+}
+
+.statistics-heading h2 {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #173e38;
+
+    font-size: 16px;
+}
+
+.statistics-symbol {
+    color: var(--primary);
+}
+
+.statistics-heading > span {
+    color: #85918e;
+
+    font-size: 9px;
+}
+
+.statistics-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 8px;
+}
+
+.stat-card {
+    min-height: 112px;
+
+    border:
+        1px solid #e0e8e5;
+
+    border-radius: 6px;
+
+    background: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 2px 10px rgba(10, 53, 45, 0.04);
+}
+
+.stat-icon {
+    color: var(--primary);
+
+    font-size: 17px;
+
+    margin-bottom: 2px;
+}
+
+.stat-card:nth-child(2) .stat-icon {
+    color: #f2bb1e;
+}
+
+.stat-card:nth-child(3) .stat-icon {
+    color: #2a80c8;
+}
+
+.stat-card:nth-child(4) .stat-icon {
+    color: #2c9c61;
+}
+
+.stat-card strong {
+    color: #173e38;
+
+    font-size: 20px;
+
+    line-height: 1.2;
+}
+
+.stat-card small {
+    color: #778580;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+    background: #06483f;
+
+    color: white;
+
+    padding: 19px 0;
+}
+
+.footer-inner {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1.5fr
+        1fr;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.footer-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+.footer-logo {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: var(--primary);
+
+    display: grid;
+    place-items: center;
+
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.footer-brand strong {
+    display: block;
+
+    font-size: 11px;
+}
+
+.footer-brand span {
+    display: block;
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 7px;
+}
+
+.footer-menu {
+    display: flex;
+
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    color: rgba(255,255,255,0.82);
+
+    font-size: 8px;
+}
+
+.footer-menu a:hover {
+    color: white;
+}
+
+.footer-menu span {
+    color: rgba(255,255,255,0.3);
+}
+
+.copyright {
+    text-align: right;
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .main-nav {
+        gap: 0;
+    }
+
+    .nav-link {
+        padding-left: 7px;
+        padding-right: 7px;
+
+        font-size: 11px;
+    }
+
+    .hero-content {
+        grid-template-columns:
+            minmax(0, 1fr)
+            300px;
+    }
+
+    .service-card {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .content-grid {
+        grid-template-columns:
+            minmax(0, 1fr)
+            270px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL DESKTOP
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .main-nav {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: flex;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .hero {
+        padding-bottom: 25px;
+    }
+
+    .hero-highlights {
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 15px;
+    }
+
+    .hero-highlight {
+        align-items: flex-start;
+    }
+
+    .service-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .statistics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .footer-brand {
+        justify-content: center;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: min(
+            calc(100% - 28px),
+            var(--container)
+        );
+    }
+
+    .site-header {
+        height: 68px;
+    }
+
+    .brand-logo {
+        width: 43px;
+        height: 43px;
+    }
+
+    .brand-logo::before {
+        width: 54px;
+    }
+
+    .brand-logo::after {
+        height: 54px;
+    }
+
+    .brand-text strong {
+        font-size: 13px;
+    }
+
+    .brand-text span {
+        font-size: 8px;
+    }
+
+    .header-actions {
+        gap: 0;
+    }
+
+    .header-actions .icon-button {
+        display: none;
+    }
+
+    .mobile-nav {
+        top: 68px;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-content {
+        min-height: auto;
+    }
+
+    .hero-copy {
+        padding-top: 30px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero-copy p {
+        font-size: 13px;
+    }
+
+    .hero-highlights {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        padding-bottom: 20px;
+    }
+
+    .hero-highlight {
+        background:
+            rgba(0, 0, 0, 0.12);
+
+        border-radius: 8px;
+
+        padding: 9px;
+    }
+
+    .service-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .service-card {
+        min-height: 180px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .news-item {
+        grid-template-columns:
+            90px
+            1fr;
+    }
+
+    .news-image {
+        height: 72px;
+
+        grid-row: span 2;
+    }
+
+    .news-date {
+        width: fit-content;
+    }
+
+    .news-content {
+        grid-column: 2;
+    }
+
+    .news-content p {
+        display: none;
+    }
+
+    .sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .statistics-cards {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .statistics-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 3px;
+    }
+
+    .safety-banner h2 {
+        font-size: 22px;
+    }
+
+    .footer-menu {
+        line-height: 1.8;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .brand-text span {
+        display: none;
+    }
+
+}
