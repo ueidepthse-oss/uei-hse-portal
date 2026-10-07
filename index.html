@@ -1,1136 +1,775 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <title>HSE Department | Health Safety Environment</title>
 
-    <title>UEI HSE | Health, Safety & Environment</title>
+    <meta
+        name="description"
+        content="HSE Department - Health, Safety & Environment"
+    >
 
-    <!-- GLOBAL STYLE -->
-    <link rel="stylesheet"
-          href="css/global.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
-    <!-- HOME STYLE -->
-    <link rel="stylesheet"
-          href="css/dashboard.css">
-
+    <!-- Home CSS -->
+    <link rel="stylesheet" href="css/home.css">
 </head>
 
-
-<body class="home-page">
-
+<body>
 
     <!-- =====================================================
          HEADER
     ====================================================== -->
+    <header class="site-header">
 
-    <header class="home-header">
+        <div class="container header-inner">
+
+            <!-- Logo -->
+            <a href="index.html" class="brand">
+
+                <div class="brand-logo">
+                    <div class="brand-logo-inner">
+                        +
+                    </div>
+                </div>
+
+                <div class="brand-text">
+                    <strong>HSE DEPARTMENT</strong>
+                    <span>Health | Safety | Environment</span>
+                </div>
+
+            </a>
 
 
-        <!-- BRAND -->
+            <!-- Desktop Navigation -->
+            <nav class="main-nav">
 
-        <a href="index.html"
-           class="home-brand">
+                <a href="index.html" class="nav-link active">
+                    Home
+                </a>
+
+                <a href="#" class="nav-link dropdown">
+                    Profil
+                    <span>⌄</span>
+                </a>
+
+                <a href="#" class="nav-link dropdown">
+                    Regulasi
+                    <span>⌄</span>
+                </a>
+
+                <a href="#" class="nav-link dropdown">
+                    Prosedur & Dokumen
+                    <span>⌄</span>
+                </a>
+
+                <a href="#" class="nav-link dropdown">
+                    Program
+                    <span>⌄</span>
+                </a>
+
+                <a href="#" class="nav-link dropdown">
+                    Berita & Informasi
+                    <span>⌄</span>
+                </a>
+
+                <a href="#" class="nav-link dropdown">
+                    Galeri
+                    <span>⌄</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    Kontak
+                </a>
+
+            </nav>
 
 
-            <div class="home-brand-logo">
+            <!-- Header Actions -->
+            <div class="header-actions">
 
-                UEI
+                <button
+                    class="icon-button"
+                    id="searchButton"
+                    aria-label="Cari"
+                >
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+                    </svg>
+                </button>
+
+                <button
+                    class="icon-button"
+                    aria-label="Akun"
+                >
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="8" r="4"></circle>
+                        <path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"></path>
+                    </svg>
+                </button>
+
+                <button
+                    class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    aria-label="Menu"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
             </div>
 
-
-            <div class="home-brand-text">
-
-                <strong>
-                    UEI HSE
-                </strong>
-
-                <span>
-                    Health, Safety & Environment
-                </span>
-
-            </div>
-
-
-        </a>
-
-
-
-        <!-- NAVIGATION -->
-
-        <nav class="home-navigation">
-
-
-            <a href="index.html"
-               class="home-nav-link active">
-
-                HOME
-
-            </a>
-
-
-            <a href="#important-report"
-               class="home-nav-link">
-
-                IMPORTANT REPORT
-
-            </a>
-
-
-            <a href="#document-category"
-               class="home-nav-link">
-
-                DOCUMENT CATEGORY
-
-            </a>
-
-
-        </nav>
-
-
-
-        <!-- MOBILE MENU -->
-
-        <button class="home-menu-button"
-                type="button"
-                aria-label="Menu">
-
-            ☰
-
-        </button>
-
+        </div>
 
     </header>
 
 
+    <!-- =====================================================
+         SEARCH OVERLAY
+    ====================================================== -->
+    <div class="search-overlay" id="searchOverlay">
+
+        <div class="search-box">
+
+            <button
+                class="search-close"
+                id="searchClose"
+                aria-label="Tutup"
+            >
+                ×
+            </button>
+
+            <h3>Cari Informasi HSE</h3>
+
+            <div class="search-input-wrapper">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Cari berita, dokumen, regulasi..."
+                >
+
+                <button id="searchSubmit">
+                    Cari
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
 
     <!-- =====================================================
-         HERO SECTION
+         MOBILE NAVIGATION
     ====================================================== -->
+    <div class="mobile-nav" id="mobileNav">
 
+        <a href="index.html">Home</a>
+        <a href="#">Profil</a>
+        <a href="#">Regulasi</a>
+        <a href="#">Prosedur & Dokumen</a>
+        <a href="#">Program</a>
+        <a href="#">Berita & Informasi</a>
+        <a href="#">Galeri</a>
+        <a href="#">Kontak</a>
+
+    </div>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
     <main>
 
+        <section class="hero">
 
-        <section class="home-hero">
+            <div class="hero-background"></div>
 
+            <div class="container hero-content">
 
-            <!-- HERO TEXT -->
+                <div class="hero-copy">
 
-            <div class="home-hero-content">
+                    <div class="hero-label">
+                        HSE DEPARTMENT
+                    </div>
 
+                    <h1>
+                        Kerja Aman, Sehat,<br>
+                        Produktif, Lingkungan Lestari
+                    </h1>
 
-                <div class="home-label">
+                    <p>
+                        Kami berkomitmen untuk menciptakan lingkungan kerja
+                        yang aman, sehat dan ramah lingkungan demi
+                        keberlanjutan operasional dan masa depan yang lebih baik.
+                    </p>
 
-                    HEALTH • SAFETY • ENVIRONMENT
-
-                </div>
-
-
-                <h1>
-
-                    Membangun Budaya Kerja
-                    <span>
-
-                        Aman, Sehat & Berkelanjutan.
-
-                    </span>
-
-                </h1>
-
-
-                <p>
-
-                    Portal informasi dan manajemen Health,
-                    Safety & Environment PT Unggul Ejawantah
-                    Industri untuk mendukung terciptanya
-                    lingkungan kerja yang aman, sehat,
-                    produktif, dan berkelanjutan.
-
-                </p>
-
-
-                <div class="home-hero-actions">
-
-
-                    <a href="#hse-dashboard"
-                       class="home-button primary">
-
-                        Explore HSE
-
+                    <a href="#" class="primary-button">
+                        Lihat Program HSE
+                        <span>→</span>
                     </a>
 
-
-                    <a href="documents.html"
-                       class="home-button secondary">
-
-                        HSE Documents
-
-                    </a>
-
-
                 </div>
 
 
-            </div>
+                <!-- Hero Highlights -->
+                <div class="hero-highlights">
 
+                    <div class="hero-highlight">
 
-
-            <!-- HERO VISUAL -->
-
-            <div class="home-hero-visual">
-
-
-                <div class="home-hero-card">
-
-
-                    <div class="hero-card-top">
-
-                        <span>
-                            UEI HSE
-                        </span>
-
-                        <span>
-                            2026
-                        </span>
-
-                    </div>
-
-
-                    <div class="hero-shield">
-
-                        🛡️
-
-                    </div>
-
-
-                    <h3>
-
-                        SAFETY FIRST
-
-                    </h3>
-
-
-                    <p>
-
-                        Zero Accident
-                        • Zero Harm
-                        • Safe Work
-
-                    </p>
-
-
-                    <div class="hero-card-line"></div>
-
-
-                    <div class="hero-card-bottom">
-
-                        <span>
-                            HSE MANAGEMENT SYSTEM
-                        </span>
-
-                        <span>
-                            UEI
-
-                        </span>
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =================================================
-             INTRODUCTION
-        ================================================== -->
-
-        <section class="home-introduction">
-
-
-            <div class="section-heading">
-
-
-                <span>
-                    ABOUT HSE
-                </span>
-
-
-                <h2>
-                    Tentang Departemen HSE
-                </h2>
-
-
-            </div>
-
-
-
-            <div class="introduction-grid">
-
-
-                <div class="introduction-text">
-
-
-                    <p>
-
-                        Departemen Health, Safety & Environment
-                        merupakan bagian penting dalam memastikan
-                        seluruh aktivitas operasional PT Unggul
-                        Ejawantah Industri berjalan sesuai dengan
-                        standar keselamatan, kesehatan kerja,
-                        perlindungan lingkungan, serta ketentuan
-                        peraturan yang berlaku.
-
-                    </p>
-
-
-                    <p>
-
-                        Melalui pengendalian risiko, inspeksi,
-                        pelaporan, pelatihan, komunikasi keselamatan,
-                        serta peningkatan berkelanjutan, HSE
-                        berkomitmen membangun budaya kerja yang
-                        mengutamakan keselamatan setiap pekerja.
-
-                    </p>
-
-
-                </div>
-
-
-
-                <div class="introduction-highlight">
-
-
-                    <div>
-
-                        <strong>
-                            ZERO ACCIDENT
-                        </strong>
-
-                        <span>
-                            Target keselamatan
-                        </span>
-
-                    </div>
-
-
-                    <div>
-
-                        <strong>
-                            SAFE WORK
-                        </strong>
-
-                        <span>
-                            Budaya kerja aman
-                        </span>
-
-                    </div>
-
-
-                    <div>
-
-                        <strong>
-                            COMPLIANCE
-                        </strong>
-
-                        <span>
-                            Kepatuhan regulasi
-                        </span>
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =================================================
-             IMPORTANT REPORT
-        ================================================== -->
-
-        <section class="home-important"
-                 id="important-report">
-
-
-            <div class="section-heading light">
-
-
-                <span>
-                    IMPORTANT REPORT
-                </span>
-
-
-                <h2>
-                    Laporan Penting HSE
-                </h2>
-
-
-                <p>
-
-                    Informasi dan laporan yang membutuhkan
-                    perhatian serta tindak lanjut.
-
-                </p>
-
-
-            </div>
-
-
-
-            <div class="important-grid">
-
-
-                <a href="incident.html"
-                   class="important-card">
-
-
-                    <div class="important-icon danger">
-                        ⚠️
-                    </div>
-
-
-                    <div>
-
-                        <span>
-                            INCIDENT
-                        </span>
-
-                        <strong>
-                            Incident Report
-                        </strong>
-
-                        <p>
-                            Pelaporan dan tindak lanjut
-                            kejadian keselamatan.
-                        </p>
-
-                    </div>
-
-
-                    <div class="important-arrow">
-                        →
-                    </div>
-
-
-                </a>
-
-
-
-                <a href="inspection.html"
-                   class="important-card">
-
-
-                    <div class="important-icon warning">
-                        🔎
-                    </div>
-
-
-                    <div>
-
-                        <span>
-                            INSPECTION
-                        </span>
-
-                        <strong>
-                            Safety Findings
-                        </strong>
-
-                        <p>
-                            Temuan hasil inspeksi
-                            dan safety patrol.
-                        </p>
-
-                    </div>
-
-
-                    <div class="important-arrow">
-                        →
-                    </div>
-
-
-                </a>
-
-
-
-                <a href="emergency.html"
-                   class="important-card">
-
-
-                    <div class="important-icon emergency">
-                        🚨
-                    </div>
-
-
-                    <div>
-
-                        <span>
-                            EMERGENCY
-                        </span>
-
-                        <strong>
-                            Emergency Response
-                        </strong>
-
-                        <p>
-                            Informasi tanggap darurat
-                            dan kontak penting.
-                        </p>
-
-                    </div>
-
-
-                    <div class="important-arrow">
-                        →
-                    </div>
-
-
-                </a>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =================================================
-             HSE DASHBOARD
-        ================================================== -->
-
-        <section class="home-dashboard"
-                 id="hse-dashboard">
-
-
-            <div class="section-heading">
-
-
-                <span>
-                    HSE PERFORMANCE
-                </span>
-
-
-                <h2>
-                    HSE Dashboard
-                </h2>
-
-
-                <p>
-                    Ringkasan informasi kinerja HSE.
-                </p>
-
-
-            </div>
-
-
-
-            <!-- CATEGORY CARDS -->
-
-            <div class="hse-category-grid">
-
-
-                <a href="inspection.html"
-                   class="hse-category-card">
-
-
-                    <div class="category-icon">
-                        🔍
-                    </div>
-
-
-                    <div>
-
-                        <span>
-                            SAFETY
-                        </span>
-
-                        <strong>
-                            Inspection
-                        </strong>
-
-                    </div>
-
-
-                    <div class="category-number">
-                        125
-                    </div>
-
-
-                </a>
-
-
-
-                <a href="incident.html"
-                   class="hse-category-card">
-
-
-                    <div class="category-icon">
-                        ⚠️
-                    </div>
-
-
-                    <div>
-
-                        <span>
-                            INCIDENT
-                        </span>
-
-                        <strong>
-                            Report
-                        </strong>
-
-                    </div>
-
-
-                    <div class="category-number">
-                        08
-                    </div>
-
-
-                </a>
-
-
-
-                <a href="p5m.html"
-                   class="hse-category-card">
-
-
-                    <div class="category-icon">
-                        👷
-                    </div>
-
-
-                    <div>
-
-                        <span>
-                            SAFETY TALK
-                        </span>
-
-                        <strong>
-                            P5M / Toolbox
-                        </strong>
-
-                    </div>
-
-
-                    <div class="category-number">
-                        45
-                    </div>
-
-
-                </a>
-
-
-
-                <a href="training.html"
-                   class="hse-category-card">
-
-
-                    <div class="category-icon">
-                        🎓
-                    </div>
-
-
-                    <div>
-
-                        <span>
-                            COMPETENCY
-                        </span>
-
-                        <strong>
-                            Training
-                        </strong>
-
-                    </div>
-
-
-                    <div class="category-number">
-                        32
-                    </div>
-
-
-                </a>
-
-
-            </div>
-
-
-
-            <!-- PERFORMANCE -->
-
-            <div class="performance-layout">
-
-
-                <div class="performance-card">
-
-
-                    <div class="performance-header">
-
+                        <div class="highlight-icon shield">
+                            ✓
+                        </div>
 
                         <div>
+                            <h3>Zero Accident</h3>
+                            <p>Tidak ada kecelakaan kerja</p>
+                        </div>
 
-                            <span>
-                                MONTHLY FINDINGS
+                    </div>
+
+
+                    <div class="hero-highlight">
+
+                        <div class="highlight-icon health">
+                            ♥
+                        </div>
+
+                        <div>
+                            <h3>Healthy People</h3>
+                            <p>Pekerja sehat, produktivitas meningkat</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="hero-highlight">
+
+                        <div class="highlight-icon environment">
+                            ◒
+                        </div>
+
+                        <div>
+                            <h3>Green Environment</h3>
+                            <p>Lingkungan terjaga, masa depan berkelanjutan</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             MAIN HSE SERVICES
+        ================================================== -->
+        <section class="service-section">
+
+            <div class="container">
+
+                <div class="service-grid">
+
+                    <!-- Kesehatan -->
+                    <a href="#" class="service-card">
+
+                        <div class="service-icon health-icon">
+                            +
+                        </div>
+
+                        <h3>Kesehatan Kerja</h3>
+
+                        <p>
+                            Promosi kesehatan, medical check up,
+                            dan layanan kesehatan kerja.
+                        </p>
+
+                        <span class="service-arrow">→</span>
+
+                    </a>
+
+
+                    <!-- Keselamatan -->
+                    <a href="#" class="service-card">
+
+                        <div class="service-icon safety-icon">
+                            ●
+                        </div>
+
+                        <h3>Keselamatan Kerja</h3>
+
+                        <p>
+                            Identifikasi bahaya, pengendalian
+                            risiko dan budaya K3.
+                        </p>
+
+                        <span class="service-arrow">→</span>
+
+                    </a>
+
+
+                    <!-- Lingkungan -->
+                    <a href="#" class="service-card">
+
+                        <div class="service-icon environment-icon">
+                            ◒
+                        </div>
+
+                        <h3>Lingkungan Hidup</h3>
+
+                        <p>
+                            Pengelolaan lingkungan, limbah
+                            dan konservasi.
+                        </p>
+
+                        <span class="service-arrow">→</span>
+
+                    </a>
+
+
+                    <!-- Regulasi -->
+                    <a href="#" class="service-card">
+
+                        <div class="service-icon regulation-icon">
+                            ▤
+                        </div>
+
+                        <h3>Regulasi & Standar</h3>
+
+                        <p>
+                            Peraturan, standar dan referensi
+                            HSE.
+                        </p>
+
+                        <span class="service-arrow">→</span>
+
+                    </a>
+
+
+                    <!-- Kompetensi -->
+                    <a href="#" class="service-card">
+
+                        <div class="service-icon training-icon">
+                            ●●
+                        </div>
+
+                        <h3>Pelatihan & Kompetensi</h3>
+
+                        <p>
+                            Peningkatan kompetensi SDM
+                            di bidang HSE.
+                        </p>
+
+                        <span class="service-arrow">→</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             NEWS + SIDEBAR
+        ================================================== -->
+        <section class="content-section">
+
+            <div class="container content-grid">
+
+                <!-- NEWS -->
+                <div class="news-area">
+
+                    <div class="section-heading">
+
+                        <div>
+                            <span class="section-label">
+                                INFORMASI TERKINI
                             </span>
+
+                            <h2>Berita & Pengumuman</h2>
+                        </div>
+
+                        <a href="#" class="view-all">
+                            Lihat Semua →
+                        </a>
+
+                    </div>
+
+
+                    <!-- News Item 1 -->
+                    <article class="news-item">
+
+                        <div class="news-image image-one">
+                            <span>HSE</span>
+                        </div>
+
+                        <div class="news-date">
+                            <strong>06</strong>
+                            <span>Okt<br>2025</span>
+                        </div>
+
+                        <div class="news-content">
 
                             <h3>
-                                HSE Finding Trend
+                                Sosialisasi Safety Talk:
+                                Stop Unsafe Action
                             </h3>
 
-                        </div>
+                            <p>
+                                HSE Departemen mengadakan kegiatan
+                                safety talk dengan tema "Stop Unsafe
+                                Action" sebagai upaya meningkatkan
+                                kesadaran pekerja terhadap bahaya
+                                di lingkungan kerja.
+                            </p>
 
-
-                        <span class="performance-period">
-                            2026
-                        </span>
-
-
-                    </div>
-
-
-
-                    <div class="performance-chart">
-
-
-                        <div class="chart-column">
-
-                            <div class="chart-bar"
-                                 style="height:42%;">
-                            </div>
-
-                            <span>
-                                Jan
-                            </span>
+                            <a href="#">
+                                Baca Selengkapnya →
+                            </a>
 
                         </div>
 
+                    </article>
 
-                        <div class="chart-column">
 
-                            <div class="chart-bar"
-                                 style="height:58%;">
-                            </div>
+                    <!-- News Item 2 -->
+                    <article class="news-item">
 
-                            <span>
-                                Feb
-                            </span>
+                        <div class="news-image image-two">
+                            <span>ENV</span>
+                        </div>
+
+                        <div class="news-date">
+                            <strong>03</strong>
+                            <span>Okt<br>2025</span>
+                        </div>
+
+                        <div class="news-content">
+
+                            <h3>
+                                Peringatan Hari Lingkungan Hidup Sedunia
+                            </h3>
+
+                            <p>
+                                Bersama kita jaga lingkungan, mulai
+                                dari hal kecil di sekitar kita.
+                                Lingkungan yang sehat adalah tanggung
+                                jawab kita bersama.
+                            </p>
+
+                            <a href="#">
+                                Baca Selengkapnya →
+                            </a>
 
                         </div>
 
+                    </article>
 
-                        <div class="chart-column">
 
-                            <div class="chart-bar"
-                                 style="height:48%;">
-                            </div>
+                    <!-- News Item 3 -->
+                    <article class="news-item">
 
-                            <span>
-                                Mar
-                            </span>
+                        <div class="news-image image-three">
+                            <span>K3</span>
+                        </div>
+
+                        <div class="news-date">
+                            <strong>30</strong>
+                            <span>Sep<br>2025</span>
+                        </div>
+
+                        <div class="news-content">
+
+                            <h3>
+                                Pemberitahuan: Pemeriksaan Kesehatan Berkala
+                            </h3>
+
+                            <p>
+                                Seluruh karyawan wajib mengikuti
+                                pemeriksaan kesehatan berkala yang
+                                akan dilaksanakan sesuai jadwal.
+                            </p>
+
+                            <a href="#">
+                                Baca Selengkapnya →
+                            </a>
 
                         </div>
 
-
-                        <div class="chart-column">
-
-                            <div class="chart-bar"
-                                 style="height:72%;">
-                            </div>
-
-                            <span>
-                                Apr
-                            </span>
-
-                        </div>
-
-
-                        <div class="chart-column">
-
-                            <div class="chart-bar"
-                                 style="height:62%;">
-                            </div>
-
-                            <span>
-                                Mei
-                            </span>
-
-                        </div>
-
-
-                        <div class="chart-column">
-
-                            <div class="chart-bar"
-                                 style="height:84%;">
-                            </div>
-
-                            <span>
-                                Jun
-                            </span>
-
-                        </div>
-
-
-                    </div>
-
+                    </article>
 
                 </div>
 
 
+                <!-- SIDEBAR -->
+                <aside class="sidebar">
 
-                <!-- STATUS -->
+                    <!-- Quick Link -->
+                    <div class="quick-links">
 
-                <div class="performance-status">
+                        <div class="sidebar-title">
+                            Quick Link
+                        </div>
+
+                        <a href="#">
+                            <span class="quick-icon">▣</span>
+                            <span>Laporan Incident & Near Miss</span>
+                            <strong>›</strong>
+                        </a>
+
+                        <a href="#">
+                            <span class="quick-icon">▤</span>
+                            <span>SIP / Izin Kerja</span>
+                            <strong>›</strong>
+                        </a>
+
+                        <a href="#">
+                            <span class="quick-icon">●</span>
+                            <span>APD & Peralatan Kerja</span>
+                            <strong>›</strong>
+                        </a>
+
+                        <a href="#">
+                            <span class="quick-icon">▰</span>
+                            <span>Dokumen HSE</span>
+                            <strong>›</strong>
+                        </a>
+
+                        <a href="#">
+                            <span class="quick-icon">☑</span>
+                            <span>Checklist & Formulir</span>
+                            <strong>›</strong>
+                        </a>
+
+                        <a href="#">
+                            <span class="quick-icon">☎</span>
+                            <span>Kontak HSE</span>
+                            <strong>›</strong>
+                        </a>
+
+                    </div>
 
 
-                    <div class="performance-status-header">
+                    <!-- Quote -->
+                    <div class="quote-card">
+
+                        <div class="quote-symbol">
+                            “
+                        </div>
+
+                        <p>
+                            Lingkungan yang baik adalah
+                            warisan terbaik untuk generasi
+                            mendatang.
+                        </p>
+
+                        <div class="quote-line"></div>
 
                         <span>
-                            FINDING STATUS
+                            HSE DEPARTMENT
                         </span>
 
-                        <strong>
-                            125
-                        </strong>
+                        <div class="mountain-decoration">
+                            ▲ ▲ ▲
+                        </div>
 
                     </div>
 
-
-                    <div class="status-progress">
-
-
-                        <div class="status-progress-bar"
-                             style="width:78%;">
-                        </div>
-
-
-                    </div>
-
-
-                    <div class="status-details">
-
-
-                        <div>
-
-                            <span class="status-dot closed">
-                            </span>
-
-                            <span>
-                                Closed
-                            </span>
-
-                            <strong>
-                                98
-                            </strong>
-
-                        </div>
-
-
-                        <div>
-
-                            <span class="status-dot open">
-                            </span>
-
-                            <span>
-                                Open
-                            </span>
-
-                            <strong>
-                                27
-                            </strong>
-
-                        </div>
-
-
-                    </div>
-
-
-                    <a href="reports.html"
-                       class="status-link">
-
-                        View HSE Reports →
-
-                    </a>
-
-
-                </div>
-
+                </aside>
 
             </div>
 
-
         </section>
-
 
 
         <!-- =================================================
-             DOCUMENT CATEGORY
+             HSE BANNER + STATISTICS
         ================================================== -->
+        <section class="statistics-section">
 
-        <section class="home-documents"
-                 id="document-category">
+            <div class="container statistics-grid">
+
+                <!-- Banner -->
+                <div class="safety-banner">
+
+                    <div class="safety-banner-content">
+
+                        <span>
+                            HSE DEPARTMENT
+                        </span>
+
+                        <h2>
+                            Keselamatan<br>
+                            adalah investasi,<br>
+                            bukan biaya.
+                        </h2>
+
+                        <a href="#">
+                            Mari Budayakan K3
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
 
 
-            <div class="section-heading">
+                <!-- Statistics -->
+                <div class="statistics-area">
+
+                    <div class="statistics-heading">
+
+                        <h2>
+                            <span class="statistics-symbol">▥</span>
+                            Statistik HSE
+                        </h2>
+
+                        <span>
+                            Update: 06 Oktober 2025
+                        </span>
+
+                    </div>
 
 
-                <span>
-                    DOCUMENT CENTER
-                </span>
+                    <div class="statistics-cards">
+
+                        <div class="stat-card">
+
+                            <span class="stat-icon">
+                                ●
+                            </span>
+
+                            <strong>0</strong>
+
+                            <small>LTI</small>
+
+                        </div>
 
 
-                <h2>
-                    Document Category
-                </h2>
+                        <div class="stat-card">
+
+                            <span class="stat-icon">
+                                ▲
+                            </span>
+
+                            <strong>0</strong>
+
+                            <small>TRIR</small>
+
+                        </div>
 
 
-                <p>
-                    Akses dokumen dan referensi HSE.
-                </p>
+                        <div class="stat-card">
 
+                            <span class="stat-icon">
+                                ◷
+                            </span>
+
+                            <strong>365</strong>
+
+                            <small>Safe Days</small>
+
+                        </div>
+
+
+                        <div class="stat-card">
+
+                            <span class="stat-icon">
+                                ✓
+                            </span>
+
+                            <strong>100%</strong>
+
+                            <small>Compliance</small>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
-
-
-
-            <div class="document-grid">
-
-
-                <a href="documents.html"
-                   class="document-card">
-
-                    <span>
-                        📘
-                    </span>
-
-                    <strong>
-                        SOP & Procedure
-                    </strong>
-
-                    <small>
-                        Prosedur HSE
-                    </small>
-
-                </a>
-
-
-                <a href="documents.html"
-                   class="document-card">
-
-                    <span>
-                        📋
-                    </span>
-
-                    <strong>
-                        JSA / JHA
-                    </strong>
-
-                    <small>
-                        Analisis keselamatan kerja
-                    </small>
-
-                </a>
-
-
-                <a href="documents.html"
-                   class="document-card">
-
-                    <span>
-                        📝
-                    </span>
-
-                    <strong>
-                        HSE Form
-                    </strong>
-
-                    <small>
-                        Form dan checklist
-                    </small>
-
-                </a>
-
-
-                <a href="emergency.html"
-                   class="document-card">
-
-                    <span>
-                        🚨
-                    </span>
-
-                    <strong>
-                        Emergency
-                    </strong>
-
-                    <small>
-                        Prosedur keadaan darurat
-                    </small>
-
-                </a>
-
-
-            </div>
-
 
         </section>
-
-
-
-        <!-- =================================================
-             GALLERY
-        ================================================== -->
-
-        <section class="home-gallery">
-
-
-            <div class="section-heading">
-
-
-                <span>
-                    HSE ACTIVITIES
-                </span>
-
-
-                <h2>
-                    HSE Gallery
-                </h2>
-
-
-                <p>
-                    Dokumentasi kegiatan keselamatan
-                    dan lingkungan kerja.
-                </p>
-
-
-            </div>
-
-
-
-            <div class="gallery-grid">
-
-
-                <div class="gallery-item gallery-one">
-
-
-                    <div class="gallery-overlay">
-
-                        <span>
-                            SAFETY PATROL
-                        </span>
-
-                        <strong>
-                            Field Inspection
-                        </strong>
-
-                    </div>
-
-
-                </div>
-
-
-
-                <div class="gallery-item gallery-two">
-
-
-                    <div class="gallery-overlay">
-
-                        <span>
-                            P5M
-                        </span>
-
-                        <strong>
-                            Toolbox Meeting
-                        </strong>
-
-                    </div>
-
-
-                </div>
-
-
-
-                <div class="gallery-item gallery-three">
-
-
-                    <div class="gallery-overlay">
-
-                        <span>
-                            EMERGENCY
-                        </span>
-
-                        <strong>
-                            Emergency Drill
-                        </strong>
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-        </section>
-
 
     </main>
-
 
 
     <!-- =====================================================
          FOOTER
     ====================================================== -->
+    <footer class="site-footer">
 
-    <footer class="home-footer">
+        <div class="container footer-inner">
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    +
+                </div>
+
+                <div>
+                    <strong>HSE DEPARTMENT</strong>
+                    <span>Health | Safety | Environment</span>
+                </div>
+
+            </div>
 
 
-        <div>
+            <div class="footer-menu">
 
-            <strong>
-                UEI HSE
-            </strong>
+                <a href="index.html">Home</a>
+                <span>|</span>
 
-            <span>
-                Health, Safety & Environment
-            </span>
+                <a href="#">Profil</a>
+                <span>|</span>
+
+                <a href="#">Regulasi</a>
+                <span>|</span>
+
+                <a href="#">Prosedur & Dokumen</a>
+                <span>|</span>
+
+                <a href="#">Program</a>
+                <span>|</span>
+
+                <a href="#">Berita & Informasi</a>
+                <span>|</span>
+
+                <a href="#">Galeri</a>
+                <span>|</span>
+
+                <a href="#">Kontak</a>
+
+            </div>
+
+
+            <div class="copyright">
+                © 2025 HSE Department. All rights reserved.
+            </div>
 
         </div>
-
-
-        <div>
-
-            © 2026 PT Unggul Ejawantah Industri
-
-        </div>
-
 
     </footer>
 
 
-
-    <!-- JAVASCRIPT -->
-
-    <script src="js/global.js"></script>
-
-    <script src="js/dashboard.js"></script>
-
+    <!-- Home JavaScript -->
+    <script src="js/home.js"></script>
 
 </body>
-
 </html>
